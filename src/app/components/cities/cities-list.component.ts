@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ICity } from "../../models/city.model";
+import { CitiesService } from "../../services/cities/cities.service";
+import { Observable } from "rxjs/Observable";
 
 @Component ({
     selector: 'cities-list',
@@ -9,9 +11,17 @@ import { ICity } from "../../models/city.model";
 
 export class CitiesListComponent implements OnInit{
 
-    cities: ICity[];
-    constructor() {}
+    cities: Observable<ICity[]>;
+    constructor(private citiesService: CitiesService) {}
 
     ngOnInit(): void {
+      this.cities = this.citiesService.getCities();
+    }
+
+    deleteCity(city :ICity)
+    {
+      this.citiesService.deleteCity(city).subscribe(data=>
+        this.cities = this.citiesService.getCities()
+      );
     }
 }

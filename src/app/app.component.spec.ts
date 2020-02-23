@@ -1,6 +1,10 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { CitiesListComponent } from './components/cities/cities-list.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { CitiesService } from './services/cities/cities.service';
+import { CitiesEndpoint } from './services/cities/cities-endpoint.service';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -8,6 +12,14 @@ describe('AppComponent', () => {
         AppComponent,
         CitiesListComponent
       ],
+      imports: [
+        BrowserModule,
+        HttpClientModule
+      ],
+      providers:[
+        CitiesService,
+        CitiesEndpoint
+      ]
     }).compileComponents();
   }));
 
@@ -22,7 +34,7 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('Synetec');
   }));
-  
+
   it('should render title in a h1 tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
