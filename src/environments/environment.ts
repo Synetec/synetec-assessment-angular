@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://localhost:53538/'
+  apiBaseUrl: 'https://my-json-server.typicode.com/mohammedanas/ccdadmin/'
 };

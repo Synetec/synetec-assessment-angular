@@ -1,6 +1,7 @@
 import { Injectable, Injector } from "@angular/core";
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { environment } from "../../environments/environment";
+import { Observable } from "rxjs/Observable";
 
 @Injectable()
 export class BaseService {
@@ -23,4 +24,5 @@ export class BaseService {
     protected getBaseUrl() : string {
         return this._baseUrl;
     }
+
 }
