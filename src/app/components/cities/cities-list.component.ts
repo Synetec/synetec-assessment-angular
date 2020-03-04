@@ -8,10 +8,8 @@ import { CitiesService } from "../../services/cities/cities.service";
 @Component({
     selector: 'cities-list',
     templateUrl: './cities-list.component.html',
-    styleUrls: ['./cities-list.component.css'],
-    providers: [CitiesEndpoint, CitiesService]
+    styleUrls: ['./cities-list.component.css']
 })
-
 export class CitiesListComponent implements OnInit {
 
     cities: ICity[] = [];

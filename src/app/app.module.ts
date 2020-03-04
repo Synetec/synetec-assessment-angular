@@ -24,7 +24,8 @@ const routes = [
     RouterModule.forRoot(routes)
   ],
   providers: [
-    BaseService
+    BaseService,
+    CitiesEndpoint, CitiesService
   ],
   bootstrap: [AppComponent]
 })
