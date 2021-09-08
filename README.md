@@ -10,7 +10,7 @@ Below you will find instructions on how to setup, complete and submit your asses
 
 Once you have finished, please return your updated solution by the specified means and within the agreed timeframe (if any). Please be sure to include all necessary files/resources required to build/run your solution.
 
-If you think it would be beneficial, please feel free to include a commentary or description to support any decisions you have made, or any challenges you faced.
+Please explain the work that you did or any challenges that you faced, either by comments in code or in an email. In case the requirements are not met or they are not finished please explain the reasoning behind that.
 
 Good luck!
 
