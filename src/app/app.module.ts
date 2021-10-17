@@ -20,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
-    BaseService
+    BaseService,
+    CitiesEndpoint
   ],
   bootstrap: [AppComponent]
 })
